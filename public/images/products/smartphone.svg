@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Smartphone">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE9F0"/><stop offset="1" stop-color="#EAF1FF"/></linearGradient>
+<linearGradient id="rb" x1="0" y1="0" x2="1" y2="0"><stop offset="0.00" stop-color="#FF4D6D"/><stop offset="0.20" stop-color="#FF9F1C"/><stop offset="0.40" stop-color="#FFD23F"/><stop offset="0.60" stop-color="#2EC4B6"/><stop offset="0.80" stop-color="#3A86FF"/><stop offset="1.00" stop-color="#8338EC"/></linearGradient>
+<linearGradient id="metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EEF2F8"/><stop offset="1" stop-color="#B8C3D6"/></linearGradient>
+<linearGradient id="dark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B3550"/><stop offset="1" stop-color="#121A2E"/></linearGradient>
+<linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3A86FF"/><stop offset=".5" stop-color="#8338EC"/><stop offset="1" stop-color="#FF4D6D"/></linearGradient></defs>
+<rect width="400" height="400" fill="url(#bg)"/>
+<circle cx="330" cy="70" r="90" fill="#fff" opacity=".35"/><circle cx="60" cy="350" r="70" fill="#fff" opacity=".3"/>
+<rect x="0" y="0" width="400" height="8" fill="url(#rb)"/>
+<ellipse cx="200" cy="338" rx="120" ry="12" fill="#12315A" opacity=".13"/>
+<rect x="138" y="52" width="124" height="262" rx="24" fill="url(#dark)"/><rect x="146" y="66" width="108" height="234" rx="16" fill="url(#screen)"/><path d="M146 230q40-60 108-20v90H146z" fill="#fff" opacity=".2"/><rect x="180" y="72" width="40" height="8" rx="4" fill="#121A2E"/><circle cx="200" cy="170" r="30" fill="#fff" opacity=".25"/><rect x="176" y="286" width="48" height="5" rx="2.5" fill="#fff" opacity=".7"/>
+</svg>

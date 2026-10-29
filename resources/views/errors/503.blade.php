@@ -1,0 +1,5 @@
+@extends('errors.layout')
+@section('title', 'Sedang pemeliharaan')
+@section('code', '503')
+@section('heading', 'Sedang pemeliharaan')
+@section('message', 'Pelangi Elektronik sedang diperbarui. Silakan coba lagi beberapa menit lagi.')

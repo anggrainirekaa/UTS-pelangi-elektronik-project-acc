@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Headphone">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E5F8F5"/><stop offset="1" stop-color="#F1E8FF"/></linearGradient>
+<linearGradient id="rb" x1="0" y1="0" x2="1" y2="0"><stop offset="0.00" stop-color="#FF4D6D"/><stop offset="0.20" stop-color="#FF9F1C"/><stop offset="0.40" stop-color="#FFD23F"/><stop offset="0.60" stop-color="#2EC4B6"/><stop offset="0.80" stop-color="#3A86FF"/><stop offset="1.00" stop-color="#8338EC"/></linearGradient>
+<linearGradient id="metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EEF2F8"/><stop offset="1" stop-color="#B8C3D6"/></linearGradient>
+<linearGradient id="dark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B3550"/><stop offset="1" stop-color="#121A2E"/></linearGradient>
+<linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3A86FF"/><stop offset=".5" stop-color="#8338EC"/><stop offset="1" stop-color="#FF4D6D"/></linearGradient></defs>
+<rect width="400" height="400" fill="url(#bg)"/>
+<circle cx="330" cy="70" r="90" fill="#fff" opacity=".35"/><circle cx="60" cy="350" r="70" fill="#fff" opacity=".3"/>
+<rect x="0" y="0" width="400" height="8" fill="url(#rb)"/>
+<ellipse cx="200" cy="338" rx="120" ry="12" fill="#12315A" opacity=".13"/>
+<path d="M98 240V190a102 102 0 0 1 204 0v50" fill="none" stroke="#2B3550" stroke-width="16" stroke-linecap="round"/><rect x="74" y="206" width="62" height="100" rx="28" fill="url(#dark)"/><rect x="264" y="206" width="62" height="100" rx="28" fill="url(#dark)"/><rect x="86" y="222" width="38" height="68" rx="19" fill="#4C5878"/><rect x="276" y="222" width="38" height="68" rx="19" fill="#4C5878"/><rect x="74" y="206" width="62" height="6" rx="3" fill="url(#rb)"/><rect x="264" y="206" width="62" height="6" rx="3" fill="url(#rb)"/>
+</svg>

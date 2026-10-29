@@ -1,0 +1,12 @@
+{
+  "name": "Pelangi Elektronik",
+  "short_name": "Pelangi",
+  "description": "Sistem Informasi Manajemen Stok dan Penjualan Elektronik",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "background_color": "#F4F7FC",
+  "theme_color": "#3A5BE8",
+  "icons": [
+    { "src": "/images/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

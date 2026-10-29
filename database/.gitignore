@@ -1,0 +1,4 @@
+# database/database.sqlite sengaja disertakan (berisi data demo) agar langsung bisa dijalankan.
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm

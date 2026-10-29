@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Power Bank">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F1E8FF"/><stop offset="1" stop-color="#E5F8F5"/></linearGradient>
+<linearGradient id="rb" x1="0" y1="0" x2="1" y2="0"><stop offset="0.00" stop-color="#FF4D6D"/><stop offset="0.20" stop-color="#FF9F1C"/><stop offset="0.40" stop-color="#FFD23F"/><stop offset="0.60" stop-color="#2EC4B6"/><stop offset="0.80" stop-color="#3A86FF"/><stop offset="1.00" stop-color="#8338EC"/></linearGradient>
+<linearGradient id="metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EEF2F8"/><stop offset="1" stop-color="#B8C3D6"/></linearGradient>
+<linearGradient id="dark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B3550"/><stop offset="1" stop-color="#121A2E"/></linearGradient>
+<linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3A86FF"/><stop offset=".5" stop-color="#8338EC"/><stop offset="1" stop-color="#FF4D6D"/></linearGradient></defs>
+<rect width="400" height="400" fill="url(#bg)"/>
+<circle cx="330" cy="70" r="90" fill="#fff" opacity=".35"/><circle cx="60" cy="350" r="70" fill="#fff" opacity=".3"/>
+<rect x="0" y="0" width="400" height="8" fill="url(#rb)"/>
+<ellipse cx="200" cy="338" rx="120" ry="12" fill="#12315A" opacity=".13"/>
+<rect x="106" y="66" width="188" height="256" rx="30" fill="url(#screen)"/><path d="M106 220q94-60 188-10v82a30 30 0 0 1-30 30H136a30 30 0 0 1-30-30z" fill="#fff" opacity=".18"/><rect x="146" y="98" width="108" height="14" rx="7" fill="#fff" opacity=".85"/><g fill="#fff"><rect x="146" y="132" width="20" height="10" rx="3"/><rect x="172" y="132" width="20" height="10" rx="3"/><rect x="198" y="132" width="20" height="10" rx="3"/><rect x="224" y="132" width="20" height="10" rx="3" opacity=".4"/></g><path d="M206 190l-30 52h26l-10 46 40-60h-26z" fill="#fff"/>
+</svg>

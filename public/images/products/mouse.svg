@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Mouse">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EAF1FF"/><stop offset="1" stop-color="#F1E8FF"/></linearGradient>
+<linearGradient id="rb" x1="0" y1="0" x2="1" y2="0"><stop offset="0.00" stop-color="#FF4D6D"/><stop offset="0.20" stop-color="#FF9F1C"/><stop offset="0.40" stop-color="#FFD23F"/><stop offset="0.60" stop-color="#2EC4B6"/><stop offset="0.80" stop-color="#3A86FF"/><stop offset="1.00" stop-color="#8338EC"/></linearGradient>
+<linearGradient id="metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EEF2F8"/><stop offset="1" stop-color="#B8C3D6"/></linearGradient>
+<linearGradient id="dark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B3550"/><stop offset="1" stop-color="#121A2E"/></linearGradient>
+<linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3A86FF"/><stop offset=".5" stop-color="#8338EC"/><stop offset="1" stop-color="#FF4D6D"/></linearGradient></defs>
+<rect width="400" height="400" fill="url(#bg)"/>
+<circle cx="330" cy="70" r="90" fill="#fff" opacity=".35"/><circle cx="60" cy="350" r="70" fill="#fff" opacity=".3"/>
+<rect x="0" y="0" width="400" height="8" fill="url(#rb)"/>
+<ellipse cx="200" cy="338" rx="120" ry="12" fill="#12315A" opacity=".13"/>
+<path d="M200 56c-62 0-92 44-92 106v70c0 52 38 82 92 82s92-30 92-82v-70c0-62-30-106-92-106z" fill="url(#metal)"/><path d="M200 56c-62 0-92 44-92 106h92z" fill="#fff" opacity=".5"/><rect x="194" y="82" width="12" height="52" rx="6" fill="url(#rb)" transform="rotate(0 200 108)"/><path d="M200 56v106" stroke="#9AA7BC" stroke-width="3"/><path d="M108 162h184" stroke="#9AA7BC" stroke-width="3"/>
+</svg>

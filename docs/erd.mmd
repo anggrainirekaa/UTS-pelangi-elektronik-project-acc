@@ -1,0 +1,254 @@
+erDiagram
+    users ||--o{ sales : "pembuat (user_id)"
+    users ||--o{ sales : "pelanggan (customer_id)"
+    users ||--o{ purchases : "mencatat (user_id)"
+    users ||--o{ audit_logs : "melakukan"
+    categories ||--o{ barangs : "mengelompokkan"
+    categories ||--o{ categories : "sub-kategori (parent_id)"
+    suppliers ||--o{ barangs : "pemasok utama"
+    suppliers ||--o{ purchases : "memasok"
+    warehouses ||--o{ warehouse_stocks : "menyimpan"
+    barangs ||--o{ warehouse_stocks : "stok per gudang"
+    purchases ||--|{ purchase_items : "berisi"
+    barangs ||--o{ purchase_items : "dibeli"
+    purchases ||--o{ purchase_receipts : "penerimaan"
+    purchase_receipts ||--|{ purchase_receipt_items : "berisi"
+    sales ||--|{ sale_items : "berisi"
+    barangs ||--o{ sale_items : "dijual"
+    sales ||--o{ sale_returns : "retur"
+    sale_returns ||--|{ sale_return_items : "berisi"
+    barangs ||--o{ stock_movements : "kartu stok"
+    warehouses ||--o{ stock_movements : "gudang"
+    barangs ||--o{ stock_batches : "batch"
+    barangs ||--o{ price_histories : "riwayat harga"
+    warehouses ||--o{ stock_transfers : "asal / tujuan"
+    barangs ||--o{ stock_transfers : "dipindah"
+    warehouses ||--o{ stock_opnames : "dihitung"
+    stock_opnames ||--|{ stock_opname_items : "berisi"
+    journal_entries ||--|{ journal_lines : "berisi"
+    accounts ||--o{ journal_lines : "dicatat"
+
+    users {
+        bigint id PK
+        string name
+        string email UK
+        string password "hash"
+        string role "owner|staff|pelanggan"
+        string phone
+        string address
+        timestamp email_verified_at
+        string remember_token
+    }
+    categories {
+        bigint id PK
+        bigint parent_id FK
+        string name UK
+        string slug UK
+        string description
+        bool is_active
+    }
+    suppliers {
+        bigint id PK
+        string name
+        string contact_person
+        string phone
+        string email
+        string address
+        int lead_time_days
+        bool is_active
+    }
+    barangs {
+        bigint id PK
+        bigint category_id FK
+        bigint supplier_id FK
+        string code UK "SKU"
+        string barcode UK
+        string name
+        bigint purchase_price
+        bigint selling_price
+        int stock
+        int minimum_stock
+        string unit
+        string image "images/products/*.svg atau upload"
+        bool is_active
+        bool tracks_expiry
+        timestamp deleted_at "soft delete"
+    }
+    warehouses {
+        bigint id PK
+        string code UK
+        string name
+        bool is_default
+    }
+    warehouse_stocks {
+        bigint id PK
+        bigint warehouse_id FK
+        bigint barang_id FK
+        int quantity
+    }
+    purchases {
+        bigint id PK
+        string purchase_number UK
+        bigint supplier_id FK
+        bigint user_id FK
+        bigint warehouse_id FK
+        bigint total
+        string status
+        timestamp purchased_at
+        string note
+        timestamp cancelled_at
+        bigint cancelled_by FK
+        string cancel_reason
+    }
+    purchase_items {
+        bigint id PK
+        bigint purchase_id FK
+        bigint barang_id FK
+        int quantity
+        int received_quantity
+        bigint unit_cost
+        bigint subtotal
+    }
+    purchase_receipts {
+        bigint id PK
+        string receipt_number UK
+        bigint purchase_id FK
+        bigint user_id FK
+        timestamp received_at
+        bigint total
+    }
+    purchase_receipt_items {
+        bigint id PK
+        bigint purchase_receipt_id FK
+        bigint purchase_item_id FK
+        bigint barang_id FK
+        int quantity
+        string batch_number
+        date expiry_date
+    }
+    sales {
+        bigint id PK
+        string sale_number UK
+        bigint user_id FK
+        bigint customer_id FK
+        bigint warehouse_id FK
+        string channel "pos|online"
+        bigint subtotal
+        bigint discount
+        bigint total
+        string status
+        string payment_method
+        string payment_status
+        timestamp paid_at
+        timestamp sold_at
+        string note
+        timestamp cancelled_at
+        bigint cancelled_by FK
+        string cancel_reason
+    }
+    sale_items {
+        bigint id PK
+        bigint sale_id FK
+        bigint barang_id FK
+        int quantity
+        bigint unit_price
+        bigint unit_cost
+        bigint subtotal
+    }
+    sale_returns {
+        bigint id PK
+        string return_number UK
+        bigint sale_id FK
+        bigint user_id FK
+        bigint refund_total
+        string reason
+    }
+    sale_return_items {
+        bigint id PK
+        bigint sale_return_id FK
+        bigint sale_item_id FK
+        bigint barang_id FK
+        int quantity
+        bigint refund_amount
+    }
+    stock_movements {
+        bigint id PK
+        bigint barang_id FK
+        bigint warehouse_id FK
+        string type
+        int quantity "bertanda +/-"
+        int balance_after
+        string reference_type
+        bigint reference_id
+        timestamp occurred_at
+    }
+    stock_batches {
+        bigint id PK
+        bigint barang_id FK
+        bigint warehouse_id FK
+        string batch_number
+        date expiry_date
+        int quantity
+    }
+    stock_transfers {
+        bigint id PK
+        string transfer_number UK
+        bigint from_warehouse_id FK
+        bigint to_warehouse_id FK
+        bigint barang_id FK
+        bigint user_id FK
+        int quantity
+        string status
+    }
+    stock_opnames {
+        bigint id PK
+        string opname_number UK
+        bigint warehouse_id FK
+        bigint user_id FK
+        string status
+        bigint reviewed_by FK
+    }
+    stock_opname_items {
+        bigint id PK
+        bigint stock_opname_id FK
+        bigint barang_id FK
+        int system_quantity
+        int counted_quantity
+        string reason
+    }
+    price_histories {
+        bigint id PK
+        bigint barang_id FK
+        bigint user_id FK
+        bigint new_purchase_price
+        bigint new_selling_price
+        string source
+    }
+    accounts {
+        bigint id PK
+        string code UK
+        string name
+        string type
+    }
+    journal_entries {
+        bigint id PK
+        string entry_number UK
+        date entry_date
+        string reference_type
+        bigint reference_id
+    }
+    journal_lines {
+        bigint id PK
+        bigint journal_entry_id FK
+        bigint account_id FK
+        bigint debit
+        bigint credit
+    }
+    audit_logs {
+        bigint id PK
+        bigint user_id FK
+        string event
+        string description
+        json old_values
+        json new_values
+    }
